@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XForms.NewBookPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Yeni Kitap Ekleme" HeightRequest="30" BackgroundColor="Blue" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="10"></Label>
+            <Picker x:Name="AuthorName" Title="Yazar Seç..." ItemDisplayBinding="{Binding FullName}"></Picker>
+            <Entry x:Name="txtBookName" Placeholder="Kitap adını giriniz."></Entry>
+            <Entry x:Name="txtPublisher" Placeholder="Yayıncı adı"></Entry>
+            <Entry x:Name="txtGenre" Placeholder="Kitap türü."></Entry>
+            <Entry x:Name="txtPrice" Placeholder="Kitap fiyatı." Keyboard="Numeric"></Entry>
+            <Button x:Name="btnKaydet" Text="Kaydet" Clicked="btnKaydet_Clicked" HorizontalOptions="EndAndExpand"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XForms.BookPage"
+             Title="Kitap Listesi">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="MenuItem1" Clicked="MenuItem1_Clicked" Order="Primary" Icon="plus.png" Priority="0" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lwBookList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10,0,0,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                                <Label Text="{Binding BookTitle}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
